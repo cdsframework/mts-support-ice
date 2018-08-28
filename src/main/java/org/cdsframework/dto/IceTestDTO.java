@@ -129,6 +129,26 @@ public class IceTestDTO extends BaseTestCaseDTO implements OffsetBasedType {
     private String groupName;
     @Column(name = "version_id", updateable = false, insertable = false)
     private String versionId;
+    private boolean evaluateAllDates;
+
+    /**
+     * Get the value of evaluateAllDates
+     *
+     * @return the value of evaluateAllDates
+     */
+    public boolean isEvaluateAllDates() {
+        return evaluateAllDates;
+    }
+
+    /**
+     * Set the value of evaluateAllDates
+     *
+     * @param evaluateAllDates new value of evaluateAllDates
+     */
+    @PropertyListener
+    public void setEvaluateAllDates(boolean evaluateAllDates) {
+        this.evaluateAllDates = evaluateAllDates;
+    }
 
     /**
      * Get the value of versionId
